@@ -6,16 +6,14 @@
         private Year _year;
         private Instructor _instructor;
         private Assistant[] _assistants;
-        private bool _isCore;
+        
 
-
-        public LectureCourse(string title, Year year, Instructor instructor, Assistant[] assistants, bool isCore)
+        public LectureCourse(string title, Year year, Instructor instructor, Assistant[] assistants)
         {
             _title = title;
             _year = year;
             _instructor = instructor;
             _assistants = assistants;
-            _isCore = isCore;
         }
 
         public string Title
@@ -42,10 +40,6 @@
             set { _assistants = value; }
         }
 
-        public bool IsCore
-        {
-            get { return _isCore; }
-            set { _isCore = value; }
-        }
+           
     }
 }

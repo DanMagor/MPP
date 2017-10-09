@@ -1,22 +1,14 @@
 ﻿namespace Assignment6
 {
-    public class Student
+    public class Student : Person
     {
-        private Name _name;
         private Year _year;
         private LectureCourse[] _lectures;
 
-        public Student(Name name, Year year, LectureCourse[] lectures)
+        public Student(Name name, Year year, LectureCourse[] lectures) : base(name)
         {
-            _name = name;
             _year = year;
             _lectures = lectures;
-        }
-
-        public Name Name
-        {
-            get { return _name; }
-            set { _name = value; }
         }
 
 

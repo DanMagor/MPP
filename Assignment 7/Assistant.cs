@@ -1,32 +1,20 @@
-﻿namespace Assignment6
+﻿using Assignment6.Properties;
+
+namespace Assignment6
 {
-    public class Assistant
+    public class Assistant:Teacher
     {
-        private Name _name;
-        private LectureCourse[] _lectures;
+        
+        
 
-        public Assistant(Name name, LectureCourse[] lectures)
+        public Assistant(Name name, LectureCourse[] lectures):base(name,lectures)
         {
-            _name = name;
-            _lectures = lectures;
         }
 
-        public Assistant(Name name)
+        public Assistant(Name name):base(name)
         {
-            _name = name;
+            
         }
 
-        public Name Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
-
-        public LectureCourse[] Lectures
-        {
-            get { return _lectures; }
-            set { _lectures = value; }
-        }
     }
 }

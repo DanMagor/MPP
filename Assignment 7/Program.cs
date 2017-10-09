@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Assignment6.Properties;
 
 namespace Assignment6
 {
@@ -19,15 +20,16 @@ namespace Assignment6
             Assistant[] mppAssistants = {assistant};
             
             //Create course.
-            var lectureCourse = new LectureCourse("MPP", year, instructor, mppAssistants, true);
+            var coreCourse = new CoreCourse("MPP", year, instructor, mppAssistants);
+            var electiveCourse = new ElectiveCourse("eSport",year,instructor,mppAssistants); //for demostration
             
             //Array of courses.
-            LectureCourse[] lectureCourses = {lectureCourse};
+            LectureCourse[] lectureCourses = {coreCourse, electiveCourse};
             
             //Some additional basic instanceses.
             var student = new Student(name, year, lectureCourses);
             var auditorium = new Auditorium("Fri", "09:00", 106);
-            var lecture = new Lecture(lectureCourse, auditorium);
+            var lecture = new Lecture(coreCourse, auditorium);
             
             //Array of lectures
             Lecture[] lectures = {lecture};
