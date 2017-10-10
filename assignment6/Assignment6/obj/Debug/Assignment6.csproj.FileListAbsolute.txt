@@ -1,0 +1,5 @@
+E:\Anton\Study\2nd Year\Fall\MPP\assignment6\Assignment6\bin\Debug\Assignment6.exe
+E:\Anton\Study\2nd Year\Fall\MPP\assignment6\Assignment6\bin\Debug\Assignment6.pdb
+E:\Anton\Study\2nd Year\Fall\MPP\assignment6\Assignment6\obj\Debug\Assignment6.csprojResolveAssemblyReference.cache
+E:\Anton\Study\2nd Year\Fall\MPP\assignment6\Assignment6\obj\Debug\Assignment6.exe
+E:\Anton\Study\2nd Year\Fall\MPP\assignment6\Assignment6\obj\Debug\Assignment6.pdb

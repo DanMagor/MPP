@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/Array.hpp
+iostream
+-
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/List.hpp
+iostream
+-
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/Stack.hpp
+iostream
+-
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/main.cpp
+iostream
+-
+Array.hpp
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/Array.hpp
+List.hpp
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/List.hpp
+Stack.hpp
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/Stack.hpp
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/result/comp.cpp
+
+E:/Anton/Study/2nd Year/Fall/MPP/assignment3/result/fibonachi.cpp
+

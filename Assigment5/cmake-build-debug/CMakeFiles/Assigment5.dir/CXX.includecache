@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Anton/Study/2nd Year/Fall/MPP/Assigment5/main.cpp
+iostream
+-
+raiondesu.cpp
+E:/Anton/Study/2nd Year/Fall/MPP/Assigment5/raiondesu.cpp
+
+E:/Anton/Study/2nd Year/Fall/MPP/Assigment5/raiondesu.cpp
+
