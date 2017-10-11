@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{102CF49A-4F23-487C-A6EA-8380E9CA0708}</ProjectGuid>
+    <ProjectGuid>{8CD5A9FB-F143-4C30-A920-591E9F5A1D72}</ProjectGuid>
     <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Assignment7.2Sharp</RootNamespace>
-    <AssemblyName>Assignment7.2Sharp</AssemblyName>
+    <RootNamespace>Assignment72</RootNamespace>
+    <AssemblyName>Assignment72</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -41,8 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Expression.cs" />
+    <Compile Include="Factor.cs" />
+    <Compile Include="Integer.cs" />
+    <Compile Include="Logical.cs" />
+    <Compile Include="Parenthesized.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Primary.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Relation.cs" />
+    <Compile Include="Term.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
