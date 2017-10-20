@@ -7,11 +7,11 @@ namespace Assignment8
     {
         public static void Main(string[] args)
         {
-            var input = Console.ReadLine(); 
+            var input = System.IO.File.ReadAllText(@"input.txt");
             var parser = new Parser(input);
             var expressionTree = parser.Parse();
-            long result = expressionTree.Calculate();
-            Console.WriteLine(result);
+            var result = expressionTree.Calculate();
+            System.IO.File.WriteAllText(@"output.txt",result.ToString());
 	    
         }
     }

@@ -134,7 +134,7 @@ namespace Assignment8
             if (op == Term.Opcode.None) return result;
             var right = ParseFactor();
             result = new Term(op, result, right);
-
+            
             return result;
         }
 
