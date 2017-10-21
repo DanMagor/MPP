@@ -7,5 +7,10 @@
         {
             return _expression.Calculate();
         }
+
+        public Parenthesized(Expression expression)
+        {
+            _expression = expression;
+        }
     }
 }

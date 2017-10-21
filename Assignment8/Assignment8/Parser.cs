@@ -21,13 +21,14 @@ namespace Assignment8
 
         private Expression ParseLogical()
         {
-            Expression result = ParseRelation();
+            var result = ParseRelation();
 
-            Logical.Opcode op = ParseLogOperator();
-            if (op != Logical.Opcode.None)
+            var op = ParseLogOperator();
+            while (op != Logical.Opcode.None)
             {
-                Expression right = ParseRelation();
+                var right = ParseRelation();
                 result = new Logical(op, result, right);
+                op = ParseLogOperator();
             }
 
 
@@ -131,10 +132,12 @@ namespace Assignment8
             var result = ParseFactor();
 
             var op = ParseTermOperator();
-            if (op == Term.Opcode.None) return result;
-            var right = ParseFactor();
-            result = new Term(op, result, right);
-            
+            while (op != Term.Opcode.None)
+            {
+                var right = ParseFactor();
+                result = new Term(op, result, right);
+                op = ParseTermOperator();
+            }
             return result;
         }
 
@@ -158,10 +161,12 @@ namespace Assignment8
             var result = ParsePrimary();
 
             var op = ParseFactorOperator();
-            if (op == Factor.Opcode.None) return result;
-            var right = ParsePrimary();
-            result = new Factor(op, result, right);
-
+            while (op != Factor.Opcode.None)
+            {
+                var right = ParsePrimary();
+                result = new Factor(op, result, right);
+                op = ParseFactorOperator();
+            }
             return result;
         }
 
@@ -191,11 +196,12 @@ namespace Assignment8
             else if (input[_currentChar] == '(')
             {
                 _currentChar++;
-                result = Parse();
+                result = new Parenthesized(Parse());
                 _currentChar++; // skip ‘)’
             }
             else
             {
+          
                 throw new Exception("Invalid input");
             }
 
