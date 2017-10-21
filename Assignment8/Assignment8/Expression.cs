@@ -8,7 +8,7 @@ namespace Assignment8
         protected Expression _right;
 
         public abstract long Calculate();
-//        public abstract string ToJson();
+        public abstract string ToJson();
 
         
         public Expression Left => _left;

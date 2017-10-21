@@ -12,5 +12,11 @@
         {
             _expression = expression;
         }
+        
+        public override string ToJson()
+        {
+            var result = _expression.ToJson();
+            return result;
+        }
     }
 }

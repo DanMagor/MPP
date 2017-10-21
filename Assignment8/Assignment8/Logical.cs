@@ -35,7 +35,17 @@ namespace Assignment8
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        public override string ToJson()
+        {
+            var result = "";
+            result += "\t\n{\n\t\"Type\" : Logical,\n";
+            result += "\t\"Operator\" : " + _op.ToString() + ",\n";
+            result += "\t\"Left\" : " + _left.ToJson() + ",\n";
+            result += "\t\"Right\" : " + _right.ToJson() + ",\n}";
             
+            return result;
         }
     }
 }
