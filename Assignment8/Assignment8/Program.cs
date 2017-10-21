@@ -10,8 +10,8 @@ namespace Assignment8
             var input = System.IO.File.ReadAllText(@"input.txt");
             var parser = new Parser(input);
             var expressionTree = parser.Parse();
-            System.IO.File.WriteAllText(@"output.txt","Parsed:" + expressionTree.ToJson());
-	    
+            var result = expressionTree.Calculate();
+            System.IO.File.WriteAllText(@"output.txt", result + "\n\nParsed:" + expressionTree.ToJson());
         }
     }
 }
