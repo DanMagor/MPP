@@ -190,9 +190,11 @@ namespace Assignment8
         {
             Expression result = null;
 
-           
-            if (_currentChar < input.Length && char.IsDigit(input[_currentChar]))
+
+            if (_currentChar < input.Length && (char.IsDigit(input[_currentChar]) || input[_currentChar] == '-'))
+            {
                 result = ParseInteger();
+            }
             else if (input[_currentChar] == '(')
             {
                 _currentChar++;
@@ -201,8 +203,8 @@ namespace Assignment8
             }
             else
             {
-          
-                throw new Exception("Invalid input");
+
+                    throw new Exception("Invalid input");
             }
 
 
@@ -212,11 +214,15 @@ namespace Assignment8
         private Integer ParseInteger()
         {
             var temp = "";
-            while (_currentChar < input.Length && char.IsDigit(input[_currentChar]))
-            {
+           
                 temp += input[_currentChar];
                 _currentChar++;
-            }
+                while (_currentChar < input.Length && char.IsDigit(input[_currentChar]))
+                {
+                    temp += input[_currentChar];
+                    _currentChar++;
+                }
+            
 
             try
             {
