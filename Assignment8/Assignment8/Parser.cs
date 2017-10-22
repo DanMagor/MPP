@@ -91,7 +91,7 @@ namespace Assignment8
             {
                 case '<':
                     _currentChar++;
-                    if (input[_currentChar + 1] == '=')
+                    if (input[_currentChar] == '=')
                     {
                         _currentChar++;
                         return Relation.Opcode.LessEq;
@@ -102,7 +102,7 @@ namespace Assignment8
                     }
                 case '>':
                     _currentChar++;
-                    if (input[_currentChar + 1] == '=')
+                    if (input[_currentChar] == '=')
                     {
                         _currentChar++;
                         return Relation.Opcode.GreaterEq;
